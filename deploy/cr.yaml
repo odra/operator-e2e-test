@@ -1,0 +1,4 @@
+apiVersion: "example.org/stuff"
+kind: "Stuff"
+metadata:
+  name: "example"

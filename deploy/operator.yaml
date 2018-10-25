@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stuff
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: stuff
+  template:
+    metadata:
+      labels:
+        name: stuff
+    spec:
+      serviceAccountName: stuff
+      containers:
+        - name: stuff
+          image: REPLACE_IMAGE
+          ports:
+          - containerPort: 60000
+            name: metrics
+          command:
+          - stuff
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: OPERATOR_NAME
+              value: "stuff"

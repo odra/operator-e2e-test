@@ -1,0 +1,13 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: stuffs.example.org
+spec:
+  group: example.org
+  names:
+    kind: Stuff
+    listKind: StuffList
+    plural: stuffs
+    singular: stuff
+  scope: Namespaced
+  version: stuff
