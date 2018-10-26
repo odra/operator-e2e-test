@@ -15,7 +15,7 @@ spec:
       serviceAccountName: stuff
       containers:
         - name: stuff
-          image: REPLACE_IMAGE
+          image: 'docker.io/odranoel/stuff:latest'
           ports:
           - containerPort: 60000
             name: metrics
